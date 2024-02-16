@@ -1,0 +1,31 @@
+calculate(or(mybool(true), mybool(false)), R).
+calculate(and(mybool(true), mybool(false)), R).
+calculate(eq(numeral(3), numeral(2)), R).
+calculate(eq(numeral(3), numeral(3)), R).
+calculate(gt(numeral(3), numeral(2)), R).
+calculate(not(mybool(true)), R).
+
+hastype([(x, intT), (y, intT)], plus(times(intT(2), varT(x)), times(varT(y), intT(2))), R).
+hastype([(x, intT), (y, intT)], gt(plus(times(intT(2), varT(x)), times(intT(3), intT(2))), times(varT(y), intT(2))), R).
+hastype([(a, intT), (b,intT)], plus(times(varT(a), intT(5)),times(varT(b), intT(3))), boolT)
+hastype([(a, intT), (b, intT)], not(gt(plus(times(varT(a), intT(5)), times(varT(b), intT(3))), intT(0))), boolT).
+hastype([(a, intT), (b,intT)], not(gt(plus(times(varT(a), intT(5)),times(varT(b), intT(3)))), intT(0)), intT).
+hastype([(c,boolT)], varT(c), intT).
+hastype([(a, boolT), (b, boolT)], and(or(boolT(false), varT(a)), and(varT(b), boolT(true))), boolT).
+hastype([(a, boolT), (b, boolT)], and(or(boolT(false), varT(a)), and(varT(b), boolT(true))), intT).
+hastype([(a, boolT)], not(varT(a)), boolT).
+hastype([(a, intT), (b, intT)], gt(plus(varT(a), intT(5)), times(varT(b),intT(3))), boolT).
+
+var -> varT
+num -> intT
+true, false -> boolT(true), boolT(false)
+mult -> times
+equal -> eq
+grt -> gt
+mul -> times
+
+interl -> insertI
+diffl -> diffI
+cartesianl -> cartesianI
+refTrans -> rtc
+refSymTrans -> rtsc
