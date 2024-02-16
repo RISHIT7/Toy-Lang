@@ -1,2 +1,8 @@
-# Toy-Lang
-A Simple Toy language made in Prolog
+# Toy Language in Prolog
+
+Welcome to the Toy Language repository! This project implements a simple toy language using Prolog. The goal is to provide a basic understanding of language design and interpretation in the context of Prolog.
+
+## Features
+- **Minimalistic Language:** The toy language is deliberately kept simple to illustrate the basics of language design and interpretation.
+
+- **Prolog Implementation:** The language interpreter is implemented in Prolog, showcasing how Prolog can be used for tasks beyond traditional logic programming.
